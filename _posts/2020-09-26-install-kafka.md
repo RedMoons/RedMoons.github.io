@@ -6,8 +6,11 @@ categories:
   - kafka
 tags:
   - kafka
+  - 카프카
   - install
+  - 설치
   - tutorial
+  - 튜토리얼
 last_modified_at: 2020-10-01T08:06:00-05:00
 ---
 
