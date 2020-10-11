@@ -3,7 +3,7 @@ title: "Kafka 튜토리얼 01 - Kafka 설치"
 excerpt: "Kafka 설치"
 
 categories:
-  - kafka
+  - Kafka tutorial
 tags:
   - kafka
   - 카프카
@@ -62,4 +62,5 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --f
 
 여기서 한 발 더 나가서, 2개의 터미널을 열어 한 쪽은 Producer, 다른 한 쪽은 Consumer를 실행시키고, Producer 쪽 터미널에서 메세지를 입력하면 Consumer 쪽에서 메세지를 성공적으로 받는걸 확인 할 수 있습니다.
 
-
+[Kafka 튜토리얼 시리즈](https://redmoons.github.io/categories/#kafka-tutorial)에서 해당 시리즈를 볼 수 있습니다.
+해당 문서는 카프카 공식 홈페이지를 참고했습니다. [공식 홈페이지](https://kafka.apache.org/22/documentation.html#quickstart)

@@ -1,9 +1,9 @@
 # main links
 main:
-  - title: "블로그 방문하기"
+  - title: "blog"
     url: https://redmoons.github.io/
-  - title: "Kafka"
-    url: /categories/kafka/
+  - title: "Projects"
+    url: /projects/
   - title: "Categories"
     url: /categories/
   - title: "Tags"
