@@ -8,6 +8,7 @@ tags:
   - algorithm
   - python
   - leetcode
+  - two sum
   - 알고리즘
   - 파이썬
   - 리트코드
@@ -16,7 +17,8 @@ tags:
 ## Leetcode #1 - Two Sum
 리트코드의 1번 문제 'Two Sum'을 파이썬으로 풀어 보도록 하겠습니다. 
 이 문제는 int 리스트에서 2개의 합이 타켓 int 가 되게 하는 것입니다.
-https://leetcode.com/problems/two-sum/
+[https://leetcode.com/problems/two-sum/](https://leetcode.com/problems/two-sum/)
+
 
 첫 번째로 brute-force 방식으로 하나하나씩 구해보겠습니다.
 그러기 위해서는 리스트에서 2개의 합을 구해야 하므로, 이중 for loop를 돌면서 두 개의 합이 타켓과 일치할 때 리턴해주면 됩니다.
@@ -40,8 +42,6 @@ class Solution:
 <br>
 
 ---
-
-<br>
 이 결과를 개선하기 위해 이렇게 해봅시다.
 중복된 값이 안 나온다고 하였으므로, list를 dictionary로 바꾸어서 (key는 list의 값들로, value는 index로) for loop를 한 번으로 줄여 보겠습니다.
 ```python
