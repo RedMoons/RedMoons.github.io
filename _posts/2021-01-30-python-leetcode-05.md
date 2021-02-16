@@ -48,3 +48,10 @@ class Solution:
             l-=1; r+=1
         return s[l+1:r]
 ```
+
+시간복잡도는 O(n²) : for문 안에 while이 들어가므로,
+공간복잡도는 O(n) : res를 계속 가지고 있으므로
+
+
+
+

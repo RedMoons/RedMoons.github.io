@@ -32,11 +32,10 @@ class Solution:
                     return [i,_i]
 ```
 
-> 시간 복잡도는 O(n²) : 2중 for loop를 이용
-> 공간 복잡도는 O(1)  : i 와 _i만이 선언되었으니 상수
+> 시간 복잡도는 O(n²) : 2중 for loop를 이용, 공간 복잡도는 O(1)  : i 와 _i만이 선언되었으니 상수
 
 결과는 아래와 같습니다.
-> Runtime: 48 ms
+> Runtime: 48 ms,
 > Memory Usage: 14.4 MB
 
 <br>
@@ -58,7 +57,7 @@ class Solution:
 ```
 
 > Runtime: 64 ms
-> Memory Usage: 14.6 MB
+Memory Usage: 14.6 MB
 
 runtime이 이중 for loop보다 더 오래나오는군요..
 
@@ -79,6 +78,5 @@ class Solution:
 먼저, enumerate를 이용해 index i와 value n을 선언하고, target에서 n을 뺀 나머지를 d에서 찾는 로직입니다.
 확실히 이렇게 구현할 경우 O(n)으로 구현이 가능합니다.
 
-하지만 runtime은 이상하게 큰 차이 없이 나오는군요..
-> Runtime: 56 ms
-> Memory Usage: 14.5 MB
+> 시간복잡도 : O(n)
+공간복잡도 : O(1)
