@@ -72,20 +72,14 @@ class Solution:
 1. sum 함수 이용하기
 * AS-IS
     ```python
+    # AS-IS
     ret = nums[0]+nums[1]+nums[len(nums)-1] 
-    ```
-* TO-BE
-    ```python
+    # TO-BE
     ret = sum[:3]
-    ```
-<br>
 
-* AS-IS
-    ```python
+    # AS-IS
     s = nums[i]+nums[l]+nums[r]
-    ```
-* TO-BE
-    ```python
+    # TO-BE
     s = sum(nums[i], nums[l], nums[r])
     ```
 
