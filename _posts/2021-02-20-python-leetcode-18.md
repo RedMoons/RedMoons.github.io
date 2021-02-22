@@ -68,4 +68,49 @@ class Solution:
 ```
 
 시간복잡도는 O(n³) (굉장히 비효율적인 코딩이 되었네요..)
-공간복잡도는 O(1)
+공간복잡도는 O(n)
+
+---
+
+### 다른 풀이 참고
+discuss에 나와있는 다른 풀이를 봐보겠습니다.
+풀이는 아래와 같습니다.
+```python
+def fourSum(self, nums, target):
+    def findNsum(l, r, target, N, result, results):
+        if r-l+1 < N or N < 2 or target < nums[l]*N or target > nums[r]*N:
+            return
+        if N == 2: 
+            while l < r:
+                s = nums[l] + nums[r]
+                if s == target:
+                    results.append(result + [nums[l], nums[r]])
+                    l += 1
+                    while l < r and nums[l] == nums[l-1]:
+                        l += 1
+                elif s < target:
+                    l += 1
+                else:
+                    r -= 1
+        else:
+            for i in range(l, r+1):
+                if i == l or (i > l and nums[i-1] != nums[i]):
+                    findNsum(i+1, r, target-nums[i], N-1, result+[nums[i]], results)
+
+    nums.sort()
+    results = []
+    findNsum(0, len(nums)-1, target, 4, [], results)
+    return results
+```
+
+이 풀이는 재귀를 이용하였고, twoSum을 응용했습니다.
+```findNsum(l, r, target, N, result, results)``` 함수에서 input으로 left, right, target(합이 될 숫자), N은 합할 숫자들의 갯수, result는 처음 target에서 값을 하나씩 뺀 합, results는 최종 결과를 위한 변수입니다.
+loop를 돌며 N을 하나씩 줄여나가면서 ```if N == 2:``` 가 될 경우 twoSum 함수를 구현하였습니다.
+
+이 분도 대단하시네요. 저도 이렇게 깔끔하게 구현하도록 열심히 하겠습니다.
+
+시간복잡도는 O(n³) 재귀는 함수를 부르는 만큼 시간복잡도를 더하는데, 
+N=4일 때, N번 함수를 부르고,
+N=3일 때, N(N-1)번 함수를 부르고,
+N=2일 때, N(N-1)(N-2)번 함수를 부르므로 O(n³) 입니다.
+공간복잡도는 O(n) 입니다.
