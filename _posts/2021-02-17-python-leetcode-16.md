@@ -1,5 +1,5 @@
 ---
-title: "Leetcode Python - 3Sum Closest"
+title: "Leetcode Python - 16. 3Sum Closest"
 excerpt: "Leetcode #16"
 
 categories:

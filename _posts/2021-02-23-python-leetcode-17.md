@@ -1,5 +1,5 @@
 ---
-title: "Leetcode Python - Letter Combinations of a Phone Number"
+title: "Leetcode Python - 17. Letter Combinations of a Phone Number"
 excerpt: "Leetcode #17"
 
 categories:
