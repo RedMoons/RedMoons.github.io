@@ -68,4 +68,5 @@ class Solution:
 ```
 
 시간복잡도는 O(log(n)) : 이진탐색
+
 공간복잡도는 O(n) : 상수 low, high, mid를 loop 돌 때마다 선언

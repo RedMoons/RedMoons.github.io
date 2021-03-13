@@ -61,5 +61,6 @@ class Solution:
         return res
 ```
 
-시간복잡도는 O(log n) : 이진탐색을 독립적으로 두번 실행,
+시간복잡도는 O(log n) : 이진탐색을 독립적으로 두번 실행
+
 공간복잡도는 O(n) : 상수 low, high, mid, res만을 선언함
