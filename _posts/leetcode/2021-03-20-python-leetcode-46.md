@@ -54,6 +54,6 @@ class Solution:
             self.dfs(nums[0:i]+nums[i+1:], r+[nums[i]], res)
 ```
 
-시간복잡도는 O(N) : 6!이내로 가능합니다. ```1 <= nums.length <= 6```
+시간복잡도는 O(N!) : 6!이내로 가능합니다. ```1 <= nums.length <= 6```
 
 공간복잡도는 O(N) : 저장되는 변수가 res, i, r 정도입니다.
