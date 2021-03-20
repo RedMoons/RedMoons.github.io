@@ -1,6 +1,6 @@
 ---
 title: "Leetcode Python - 43. Multiply Strings"
-excerpt: "Leetcode #30"
+excerpt: "Leetcode #43"
 
 categories:
   - Python algorithm
