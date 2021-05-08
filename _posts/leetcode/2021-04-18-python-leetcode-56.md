@@ -1,6 +1,6 @@
 ---
 title: "Leetcode Python - 56. Merge Intervals"
-excerpt: "Leetcode #55"
+excerpt: "Leetcode #56"
 
 categories:
   - Python algorithm
@@ -18,15 +18,22 @@ tags:
 리트코드의 문제 56 'Merge Intervals'을 파이썬으로 풀어 보도록 하겠습니다. 
 
 이 문제는 주어진 list에서 내부에 list들의 조합으로 이루어져 있는데,
-예시 ```intervals = [[1,3],[2,6],[8,10],[15,18]]```
+예시 
+```
+intervals = [[1,3],[2,6],[8,10],[15,18]]
+```
 여기서 내부 list는 start와 end를 나타냅니다.
 이 list들의 겹치는 값들을 병합하는 문제입니다.
 
 예를 보면, 두 list를 병합하는 걸 볼 수 있습니다.
 As-Is
-```[1,3],[2,6]``` 
+  ```
+  [1,3],[2,6]
+  ``` 
 To-Be
-```[1,6]```
+  ```
+  [1,6]
+  ```
 
 discuss의 답안을 보도록 하겠습니다.
 정말 심플하게 풀었습니다.. 대단하십니다..
