@@ -46,8 +46,12 @@ tmp.next = None
 
 전체 코드는 아래와 같습니다.
 ```python
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 class Solution:
-    def rotateRight(self, head: ListNode, k: int) -> ListNode:
+    def rotateRight(self, head, k):
         if head is None:
             return head
 
