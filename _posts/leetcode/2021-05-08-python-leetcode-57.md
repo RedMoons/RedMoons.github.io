@@ -8,7 +8,7 @@ tags:
   - algorithm
   - python
   - leetcode
-  - Merge Intervals
+  - Insert Interval
   - 알고리즘
   - 파이썬
   - 리트코드
