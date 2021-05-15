@@ -57,4 +57,26 @@ class Solution:
 
 
 ### 개선하기
-TBD
+이진탐색을 이용해 시간복잡도를 개선해보겠습니다.
+```python
+class Solution:
+    def searchMatrix(self, matrix, target):
+        m,n = len(matrix), len(matrix[0])
+        low, high = 0, m*n
+        
+        while low < high:
+            mid = (low+high)//2
+            x = matrix[mid//n][mid%n]
+            if  x < target:
+                low = mid+1
+            elif x > target:
+                high=mid
+            else:
+                return True
+            
+        return False
+```
+
+시간복잡도는 O(log(m+n)) : m*n에 대한 이진탐색 트리
+
+공간복잡도는 O(1) : 상수 m,n,row,high,mid,x 가 선언
