@@ -12,6 +12,7 @@ tags:
   - 알고리즘
   - 파이썬
   - 리트코드
+  - dfs
 ---
 
 ## Leetcode #46 - Permutations
@@ -24,7 +25,7 @@ tags:
 ```python
 def permute(self, nums):
     res = []
-    self.dfs(nums, []. res)
+    self.dfs(nums, [], res)
     return res
 ```
 

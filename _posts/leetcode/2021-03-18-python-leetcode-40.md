@@ -12,6 +12,7 @@ tags:
   - 알고리즘
   - 파이썬
   - 리트코드
+  - dfs
 ---
 
 ## Leetcode #40 - Combination Sum II
