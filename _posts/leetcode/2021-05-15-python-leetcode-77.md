@@ -1,6 +1,6 @@
 ---
-title: "Leetcode Python - 75. Sort Colors"
-excerpt: "Leetcode #75"
+title: "Leetcode Python - 77. Combinations"
+excerpt: "Leetcode #77"
 
 categories:
   - Python algorithm
@@ -8,44 +8,39 @@ tags:
   - algorithm
   - python
   - leetcode
-  - Sort Colors
+  - Combinations
   - 알고리즘
   - 파이썬
   - 리트코드
+  - dfs
 ---
 
-## Leetcode #75 - Sort Colors
-리트코드의 문제 75 'Sort Colors'을 파이썬으로 풀어 보도록 하겠습니다. 
+## Leetcode #77 - Combinations
+리트코드의 문제 77 'Combinations'을 파이썬으로 풀어 보도록 하겠습니다. 
 
-이 문제는 list가 주어지면, 크기별로 순서대로 정렬하는 문제입니다.
-
-저는 count라는 dictionary를 선언해 0,1,2의 숫자를 업데이트하고, 
-이 갯수만큼 nums를 업데이트 해줍니다.
-
+이 문제는 가능한 list의 조합을 구하는 문제입니다.
+dfs를 이용해 풀 수 있습니다.
 ```python
-class Solution:
-    def sortColors(self, nums):
-        count = {'0':0, '1':0, '2':0}
-        n = len(nums)
+def combine(self, n, k):
+    ret = []
+    self.dfs(list(range(1, n+1)), k, [], ret)
+    return ret
+```
 
-        for i in range(n):
-            if nums[i] == 0:
-                count['0'] += 1
-            elif nums[i] == 1:
-                count['1'] += 1
-            else:
-                count['2'] += 1
-        
-        for i in range(count['0']):
-            nums[i] = 0
-        for i in range(count['1']):
-            nums[i + count['0']] = 1
-        for i in range(count['2']):
-            nums[i + count['0'] + count['1']] = 2
+dfs 함수를 구현합니다.
+```python
+def dfs(self, nums, k, path, ret):
+    if len(path) == k:
+        ret.append(path)
+        return 
+    for i in range(len(nums)):
+        self.dfs(nums[i+1:], k, path+[nums[i]], ret)
 ```
 
 
-시간복잡도는 O(n) : n에 대한 loop가 2번
 
-공간복잡도는 O(1) : dictionary count 선언
+
+시간복잡도는 O(n²) : dfs함수는 (n+(n-1)+(n-2)...+1) 번 호출됨
+
+공간복잡도는 O(n²) : 함수 호출되는 만큼의 공간 차지
 
