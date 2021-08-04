@@ -47,5 +47,4 @@ class Solution:
 
 시간복잡도는 O(n) : for loop n
 
-공간복잡도는 O(1) : prev, cur 선언
-
+공간복잡도는 O(n) : n 사이즈의 list 생성
