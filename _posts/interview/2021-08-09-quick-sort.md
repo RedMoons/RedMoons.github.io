@@ -1,13 +1,13 @@
 ---
-title: "Sort infomation"
-excerpt: "Sort 종류별 정리"
+title: "Quick sort"
+excerpt: "퀵 소트 정리"
 
 categories:
   - Interview
 tags:
   - interview
   - 인터뷰
-  - sort
+  - quick sort
   - 정렬
 ---
 
