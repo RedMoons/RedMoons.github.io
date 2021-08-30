@@ -3,10 +3,10 @@ title: "Merge sort"
 excerpt: "머지 소트 정리"
 
 categories:
-  - Interview
+  - Summary
 tags:
-  - interview
-  - 인터뷰
+  - summary
+  - 정리
   - merge sort
   - 정렬
 ---
