@@ -22,6 +22,7 @@ tags:
     * 분할 정복 방법을 통해 구현됩니다. 주어진 리스트를 잘게 쪼겐 후 합병하는 방식으로 진행됩니다.
 
 2. 샘플 코드
+
 ```python
 def mergeSort(myList):
     if len(myList) > 1:
@@ -52,7 +53,6 @@ def mergeSort(myList):
             myList[k]=right[j]
             j += 1
             k += 1
-
 ```
 
 

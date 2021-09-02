@@ -3,10 +3,10 @@ title: "Quick sort"
 excerpt: "퀵 소트 정리"
 
 categories:
-  - Interview
+  - Summary
 tags:
-  - interview
-  - 인터뷰
+  - summary
+  - 정리
   - quick sort
   - 정렬
 ---
