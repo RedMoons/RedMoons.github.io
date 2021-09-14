@@ -10,9 +10,8 @@ tags:
   - 名前
 ---
 
-## あなたの名前を書いてください
-#### オススメ韓国の名前が見えます。
-
+## オススメ韓国の名前が見えます。
+#### あなたの名前を書いてください。
 
 <input type="text" id="input_text" name="input_text"/> 
 <input type="submit" value="クリック"/> 
@@ -23,14 +22,11 @@ tags:
       return response.json();
     }).then(data => {
       // Work with JSON data here
-      document.getElementById('test_api').innerHTML = data
+      document.getElementById('test_api').innerHTML = data.name
       console.log(data);
     }).catch(err => {
       // Do something for an error here
     });
 
-
-
 </script>
-
-<div id='test_api'>　abc </div>
+<span id="test_api"></span>
