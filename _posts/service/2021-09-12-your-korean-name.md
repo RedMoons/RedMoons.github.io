@@ -12,9 +12,10 @@ tags:
 
 ## あなたの名前を書いてください
 #### オススメ韓国の名前が見えます。
-<button onclick="window.location.href='https://www.naver.com';">Click</button>
 
-<input type="text" id="name" name="name"/> 
+
+<input type="text" id="input_text" name="input_text"/> 
+<input type="submit" value="クリック"/> 
 
 <script type="text/javascript">
     var apiUrl = 'https://jsonplaceholder.typicode.com/users/1/';
@@ -32,4 +33,4 @@ tags:
 
 </script>
 
-<div id='test_api'> </div>
+<div id='test_api'>　abc </div>
