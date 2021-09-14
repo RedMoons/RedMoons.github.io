@@ -17,20 +17,22 @@ tags:
 <input type="submit" value="クリック" onClick="myFunction();"/> 
 
 <script type="text/javascript">
+
+
+function myFunction() {
     var apiUrl = 'https://jsonplaceholder.typicode.com/users/1/';
     fetch(apiUrl).then(response => {
       return response.json();
     }).then(data => {
       // Work with JSON data here
-      document.getElementById('test_api').innerHTML = data.name
+      document.getElementById("demo").innerHTML = data.name
       
       console.log(data);
     }).catch(err => {
       // Do something for an error here
     });
 
-function myFunction() {
-    document.getElementById("demo").innerHTML = data.name
+    
 }
 </script>
 <span id="demo"></span>
