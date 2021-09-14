@@ -14,7 +14,7 @@ tags:
 #### あなたの名前を書いてください。
 
 <input type="text" id="input_text" name="input_text"/> 
-<input type="submit" value="クリック" onClick="return foo();"/> 
+<input type="submit" value="クリック" onClick="myFunction();"/> 
 
 <script type="text/javascript">
     var apiUrl = 'https://jsonplaceholder.typicode.com/users/1/';
@@ -23,14 +23,14 @@ tags:
     }).then(data => {
       // Work with JSON data here
       document.getElementById('test_api').innerHTML = data.name
+      
       console.log(data);
     }).catch(err => {
       // Do something for an error here
     });
 
-function foo() {
-   alert("Submit button clicked!");
-   return true;
+function myFunction() {
+    document.getElementById("demo").innerHTML = data.name
 }
 </script>
-<span id="test_api"></span>
+<span id="demo"></span>
