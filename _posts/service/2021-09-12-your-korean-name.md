@@ -10,29 +10,26 @@ tags:
   - 名前
 ---
 
-## オススメ韓国の名前が見えます。
-#### あなたの名前を書いてください。
+## あなたにピッタリな韓国の名前は？
+#### あなたの名前を入力してください。（ひらがなで）
 
-<input type="text" id="input_text" name="input_text"/> 
-<input type="submit" value="クリック" onClick="myFunction();"/> 
+<input type="text" id="inputText" name="inputText"/> 
+<input type="submit" value="クリック" onClick="getRecommendName();"/> 
 
 <script type="text/javascript">
 
 
-function myFunction() {
+function getRecommendName() {
     var apiUrl = 'https://jsonplaceholder.typicode.com/users/1/';
     fetch(apiUrl).then(response => {
       return response.json();
     }).then(data => {
       // Work with JSON data here
-      document.getElementById("demo").innerHTML = data.name
-      
+      document.getElementById("recommendName").innerHTML = data.name
       console.log(data);
     }).catch(err => {
       // Do something for an error here
     });
-
-    
 }
 </script>
-<span id="demo"></span>
+<span id="recommendName"></span>
