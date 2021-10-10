@@ -28,13 +28,10 @@ def mergeSort(myList):
     if len(myList) > 1:
         mid = len(myList) // 2
         left, right = myList[:mid], myList[mid:]
-
         mergeSort(left)
         mergeSort(right)
-
         i,j = 0, 0
         k = 0
-
         while i < len(left) and j < len(right):
             if left[i] <= right[j]:
               myList[k] = left[i]
@@ -43,16 +40,81 @@ def mergeSort(myList):
                 myList[k] = right[j]
                 j += 1
             k += 1
-
         while i < len(left):
             myList[k] = left[i]
             i += 1
             k += 1
-
         while j < len(right):
             myList[k]=right[j]
             j += 1
             k += 1
 ```
 
+#### 2 함수로 분할한 예제
+```python
+def mergeSort(myList):
+    if not myList:
+        return None
+    if len(myList) == 1:
+        return myList
+    mid = len(myList)//2
+    left, right = mergeSort(myList[:mid]), mergeSort(myList[mid:])
+    return merge(myList, left, right)
 
+
+def merge(myList, left, right):
+    i,j = 0,0
+    k = 0
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            myList[k] = left[i]
+            i += 1
+        else:
+            myList[k] = right[j]
+            j += 1
+        k += 1
+    while i < len(left):
+        myList[k] = left[i]
+        i += 1
+        k += 1
+    while j < len(right):
+        myList[k] = right[j]
+        j += 1
+        k += 1
+    return myList
+
+```
+
+
+
+#### linked list 가 포함된 list의 merge sort
+```python
+def mergeKLists(lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+    if not lists:
+        return None
+    if len(lists) == 1:
+        return lists[0]
+
+    mid = len(lists)//2
+    l,r = mergeKLists(lists[mid:]), mergeKLists(lists[:mid])
+
+    return merge(l,r)
+
+
+def merge(l, r):
+    dummy = p = ListNode()
+    while l and r:
+        if l.val < r.val:
+            p.next = l
+            l = l.next
+        else:
+            p.next = r
+            r = r.next
+        p = p.next
+    if l:
+        p.next = l
+    if r:
+        p.next = r
+    return dummy.next
+
+```

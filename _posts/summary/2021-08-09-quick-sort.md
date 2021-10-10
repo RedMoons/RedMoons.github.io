@@ -24,52 +24,43 @@ tags:
     * 최악 시간복잡도 : O(n²)
 
 2. 샘플 코드
-    파이썬으로 
-    ```python
-    def quicksort(x):
-        if len(x) <= 1:
-            return
-        more = []
-        less = []
-        equal = []
-        pivot = x[len(x)//2]
-        for i in x:
-            if i < pivot:
-                less.append(i)
-            elif i > pivot:
-                more.append(i)
-            else:
-                equal.append(i)
-        return quicksort(less) + equal + quicksort(more)
-    ```
+파이썬으로 
+```python
+def quicksort(myList):
+    if len(myList) <= 1:
+        return myList
+    more, less, equal = [], [], []
+    pivot = myList[len(myList)//2]
+    for i in myList:
+        if i < pivot:
+            less.append(i)
+        elif i > pivot:
+            more.append(i)
+        else:
+            equal.append(i)
+    return quicksort(less) + equal + quicksort(more)
+```
 
-    cache를 안쓰고, 풀 경우
-    ```python
-    def partition(arr, start, end):
-        pivot = arr[start]
-        left = start + 1
-        right = end
-        done = False
-        while not done:
-            while left <= right and arr[left] <= pivot:
-                left += 1
-            while left <= right and pivot <= arr[right]:
-                right -= 1
-            if right < left:
-                done = True
-            else:
-                arr[left], arr[right] = arr[right], arr[left]
-        arr[start], arr[right] = arr[right], arr[start]
-        return right
+cache를 안쓰고, 풀 경우
+```python
+def partition(arr, start, end):
+    pivot = arr[start]
+    left = start + 1
+    right = end
+    done = False
+    while not done:
+        while left <= right and arr[left] <= pivot:
+            left += 1
+        while left <= right and pivot <= arr[right]:
+            right -= 1
+        if right < left:
+            done = True
+        else:
+            arr[left], arr[right] = arr[right], arr[left]
+    arr[start], arr[right] = arr[right], arr[start]
+    return right
+```
 
-
-    def quick_sort(arr, start, end):
-        if start < end:
-            pivot = partition(arr, start, end)
-            quick_sort(arr, start, pivot - 1)
-            quick_sort(arr, pivot + 1, end)
-        return arr
-    ```
 
 3. 평균 시간복잡도 & 최악 시간복잡도
     * 위에서도 언급했지만 평균 시간복잡도는 
@@ -79,7 +70,52 @@ tags:
     (n번의 수행) * (n 번 비교 필요)으로
     O(n²) 이 됩니다.
 
+```python
+def qsort(arr, low, high):
+    if high <= low:
+        return
+    mid = partition(arr, low, high)
+    print('low, mid, high : ',str(low), str(mid), str(high))
+    qsort(arr, low, mid - 1)
+    qsort(arr, mid, high)
+    return arr
 
 
+def partition(arr, low, high):
+    pivot = arr[(low + high) // 2]
+    print('pivot : ', str(pivot))
+    while low <= high:
+        while arr[low] < pivot:
+            low += 1
+        while arr[high] > pivot:
+            high -= 1
+        if low <= high:
+            arr[low], arr[high] = arr[high], arr[low]
+            low, high = low + 1, high - 1
+    print('arr : ', arr)
+    print('low : ', str(low))
+    return low
+```
+```python
+def qsort(arr, low, high):
+    if high <= low:
+        return
+    mid = partition(arr, low, high)
+    qsort(arr, low, mid-1)
+    qsort(arr, mid, high)
+    return arr
 
+def partition(arr, low, high):
+    pivot = arr[(low+high)//2]
+    while low <= high:
+        while arr[low] < pivot:
+            low += 1
+        while arr[high] > pivot:
+            high == 1
+        if low <= high:
+            arr[low], arr[high] = arr[high], arr[low]
+            low += 1
+            high -= 1
+    return low
 
+```
