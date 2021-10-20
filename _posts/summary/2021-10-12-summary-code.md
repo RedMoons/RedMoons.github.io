@@ -1,3 +1,14 @@
+---
+title: "Summary code"
+excerpt: "기본 코드 정리"
+
+categories:
+  - Summary
+tags:
+  - summary
+---
+
+```python
 def quickSort(arr, low, high):
     if high <= low:
         return
@@ -108,3 +119,4 @@ def searchTree(root):
         stack.append(node.left)
         stack.append(node.right)
     return res
+```
