@@ -75,7 +75,6 @@ def qsort(arr, low, high):
     if high <= low:
         return
     mid = partition(arr, low, high)
-    print('low, mid, high : ',str(low), str(mid), str(high))
     qsort(arr, low, mid - 1)
     qsort(arr, mid, high)
     return arr
@@ -83,7 +82,6 @@ def qsort(arr, low, high):
 
 def partition(arr, low, high):
     pivot = arr[(low + high) // 2]
-    print('pivot : ', str(pivot))
     while low <= high:
         while arr[low] < pivot:
             low += 1
@@ -92,30 +90,5 @@ def partition(arr, low, high):
         if low <= high:
             arr[low], arr[high] = arr[high], arr[low]
             low, high = low + 1, high - 1
-    print('arr : ', arr)
-    print('low : ', str(low))
     return low
-```
-```python
-def qsort(arr, low, high):
-    if high <= low:
-        return
-    mid = partition(arr, low, high)
-    qsort(arr, low, mid-1)
-    qsort(arr, mid, high)
-    return arr
-
-def partition(arr, low, high):
-    pivot = arr[(low+high)//2]
-    while low <= high:
-        while arr[low] < pivot:
-            low += 1
-        while arr[high] > pivot:
-            high == 1
-        if low <= high:
-            arr[low], arr[high] = arr[high], arr[low]
-            low += 1
-            high -= 1
-    return low
-
 ```
