@@ -37,7 +37,7 @@ def mergeSort(myList):
     if len(myList) == 1:
         return myList
     mid = len(myList)//2
-    left, right = mergeSort(myList[:mid], myList[mid:])
+    left, right = mergeSort(myList[:mid]), mergeSort(myList[mid:])
     return merge(myList, left, right)
 
 def merge(myList,left, right):
