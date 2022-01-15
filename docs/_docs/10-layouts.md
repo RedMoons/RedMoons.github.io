@@ -306,7 +306,7 @@ A derivative archive page layout to be used as a simple home page. It is built t
 
 <figure>
   <img src="{{ '/assets/images/mm-home-post-pagination-example.jpg' | relative_url }}" alt="paginated home page example">
-  <figcaption>Example of a paginated home page showing 5 recent posts.</figcaption>
+  <figcaption>Example of a paginated home page showing 10 recent posts.</figcaption>
 </figure>
 
 To use create `index.html` at the root of your project and add the following YAML Front Matter:
