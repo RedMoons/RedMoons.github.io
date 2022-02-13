@@ -38,7 +38,7 @@ comments:
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
-    num_posts            : # 5 (default)
+    num_posts            : 20
     colorscheme          : # "light" (default), "dark"
   utterances:
     theme                : # "github-light" (default), "github-dark"
@@ -97,7 +97,7 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "취미로 블로그하는 개발자"
   location         : "Tokyo"
-  email            :
+  email            : "sjbyeon610@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
