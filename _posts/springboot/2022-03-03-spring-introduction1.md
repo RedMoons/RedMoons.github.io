@@ -3,7 +3,7 @@ title: "스프링 thymleaf 동작 구조"
 excerpt: "스프링 입문thymleaf view 동작 환경"
 
 categories:
-  - 스프링 입문
+  - Spring introduction
 tags:
   - spring
   - 스프링
