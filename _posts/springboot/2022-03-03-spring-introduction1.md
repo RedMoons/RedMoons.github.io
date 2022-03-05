@@ -3,13 +3,14 @@ title: "스프링 thymleaf 동작 구조"
 excerpt: "스프링 입문thymleaf view 동작 환경"
 
 categories:
-  - Spring introduction
+  - Spring Introduction
 tags:
   - spring
   - 스프링
   - thymleaf
   - 타임리프
 ---
+
 
 김영한님의 스프링 입문 무료 강의의 정리내용입니다.
 
