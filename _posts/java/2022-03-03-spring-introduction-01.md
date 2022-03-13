@@ -11,7 +11,7 @@ tags:
   - 타임리프
 ---
 
-
+# 스프링 입문
 김영한님의 스프링 입문 무료 강의의 정리내용입니다.
 
 # 기본 세팅
@@ -55,7 +55,7 @@ public class HelloController {
 ```bash
 resources/templates/template1.html
 ```
-```java
+```html
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
