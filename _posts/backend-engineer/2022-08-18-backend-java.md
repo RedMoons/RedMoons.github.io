@@ -62,7 +62,10 @@ tags:
          * In turn, a client is any class which uses services.
      * **Advantage**
        1. First, a basic benefit of dependency injection is separate constructing objects and using objects. By this, it is decreased coupling between classes and their dependencies. So that programs become more reusable, testable and maintainable.
+       2. Second, dependency injection reduces boilerplate code, since all dependency creation is handled by a single component.
     * **Disadvantage**
-      * 
+      * First, makes code difficult to trace because it separates behavior from construction.
    * **Types of dependency injection**
-       * 
+      1. Constructor injection - where dependencies are provided through a client's class constructor
+      2. Setter injection - where the client exposes a setter method which accepts the dependency.
+      3. Interface injection - where the dependency's interface provides an injector method that will inject the dependency into any client passed to it.
