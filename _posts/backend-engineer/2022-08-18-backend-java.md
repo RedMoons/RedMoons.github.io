@@ -51,5 +51,18 @@ tags:
 ---
 ### Spring
 
-1. <span style="color: black; background-color: #fff5b1;"> **Please explain about Dependency injection.** 2~3min</span>
-     * 
+1. <span style="color: black; background-color: #fff5b1;"> **Please explain about Dependency injection.** 3~5min</span>
+     * **Definition**
+       * Dependency injection is a design pattern that an object receives other objects dependency. 
+       * By using depdendency injection, we can achieve that separate constructing objects and using them.
+     * **Role**
+       * Dependency injection involves 4 roles : services, clients, interfaces and injectors.
+       * Services and clients 
+         * A service is any class which contains functionality. 
+         * In turn, a client is any class which uses services.
+     * **Advantage**
+       1. First, a basic benefit of dependency injection is separate constructing objects and using objects. By this, it is decreased coupling between classes and their dependencies. So that programs become more reusable, testable and maintainable.
+    * **Disadvantage**
+      * 
+   * **Types of dependency injection**
+       * 
