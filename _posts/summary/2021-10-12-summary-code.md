@@ -8,6 +8,7 @@ tags:
   - summary
 ---
 
+### quickSort
 ```python
 def quickSort(arr, low, high):
     if high <= low:
@@ -30,7 +31,9 @@ def partition(arr, low, high):
             low += 1
             high -= 1
     return low
-
+```
+### mergeSort
+```python
 def mergeSort(myList):
     if not myList:
         return
@@ -60,7 +63,8 @@ def merge(myList,left, right):
         k += 1
         j += 1
     return myList
-
+```
+```python
 def searchTree(root):
     res = []
     stack = [root]
@@ -70,13 +74,15 @@ def searchTree(root):
         stack.append(node.right)
         stack.append(node.left)
     return res
-    
-# dfs
+```
+
+### dfs
+```python
+### 1 ###
 def permute(self, nums):
     res = []
     self.dfs(nums, [], res)
     return res
-
 
 def dfs(self, nums, r, res):
     if not len(nums):
@@ -85,7 +91,37 @@ def dfs(self, nums, r, res):
     for i in range(len(nums)):
         self.dfs(nums[0:i] + nums[i+1], r + [nums[i]], res)
 
+### 2 ###
+def dfs(course, visited):
+    if course in visited:
+        return False
+    if preMap[course] == []:
+        return True
+    
+    visited.add(course)
+    for c in preMap[course]:
+        if not dfs(c, visited):
+            return False
+    visited.remove(course)
+    preMap[course] = []
+    return True
+
+preMap = dict()
+for i in range(numCourses):
+    preMap[i] = []
+
+for c, pre in prerequisites:
+    preMap[c] = preMap.get(c, []) + [pre]
+
+visited = set()
+for c in range(numCourses):
+    if not dfs(c, visited):
+        return False
+return True
+```
+
 # binary search
+```python
 def search(nums, target):
     low, high = 0, len(nums)-1
     while low <= high:
