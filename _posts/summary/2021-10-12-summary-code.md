@@ -156,3 +156,18 @@ def searchTree(root):
         stack.append(node.right)
     return res
 ```
+
+# dfs left, right 이진트리 아래부터 올라오는 예제
+```python
+    def distributeCoins(self, root: Optional[TreeNode]) -> int:
+        def dfs(root):
+            if not root:
+                return 0
+
+            left = dfs(root.left)
+            right = dfs(root.right)
+            self.res += abs(left) + abs(right)
+            return root.val + left + right - 1
+        dfs(root)
+        return self.res
+```
