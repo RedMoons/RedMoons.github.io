@@ -171,3 +171,25 @@ def searchTree(root):
         dfs(root)
         return self.res
 ```
+
+# minheap
+```python
+# heapify : O(n)
+# pop : O(1)
+# add : O(1)
+# insert : O(log n)
+# remove : O(log n)
+
+def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
+    minheap = []
+    for x,y in points:
+        dist = x**2 + y**2
+        minheap.append([dist, x, y])
+
+    heapq.heapify(minheap)
+    res = []
+    while k>0:
+        dist, x, y = heapq.heappop(minheap)
+        res.append([x,y])
+        k -= 1
+```
