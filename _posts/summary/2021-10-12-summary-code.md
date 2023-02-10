@@ -193,3 +193,52 @@ def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
         res.append([x,y])
         k -= 1
 ```
+
+# 이진 트리 공통 부모 찾기
+```python
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        if p == root or q == root:
+            return root
+        
+        left = right = None
+        
+        if root.left:
+            left = self.lowestCommonAncestor(root.left, p, q)
+        if root.right:
+            right = self.lowestCommonAncestor(root.right, p, q)
+            
+        if left and right:
+            return root
+        else:
+            return left or right
+```
+
+# binary search
+```python
+def binary_search(array) -> int:
+    def condition(value) -> bool:
+        pass
+
+    left, right = min(search_space), max(search_space) # could be [0, n], [1, n] etc. Depends on problem
+    while left < right:
+        mid = (right + left) // 2
+        if condition(mid):
+            right = mid
+        else:
+            left = mid + 1
+    return left
+
+
+def binary_search(arr: List[int], target: int) -> int:
+    left, right = 0, len(arr) - 1
+    first_true_index = -1
+    while left <= right:
+        mid = (left + right) // 2
+        if feasible(mid):
+            first_true_index = mid
+            right = mid - 1
+        else:
+            left = mid + 1
+
+    return first_true_index
+```
