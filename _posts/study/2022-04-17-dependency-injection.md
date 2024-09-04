@@ -3,7 +3,7 @@ title: "Dependency Injection 이란"
 excerpt: "Dependency Injection 정리"
 
 categories:
-  - General
+  - Study
 tags:
   - Dependency Injection
   - DI
