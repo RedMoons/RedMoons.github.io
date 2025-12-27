@@ -16,7 +16,6 @@ tags:
 ---
 ### Cloud Architecture
 Cloud Architecture AI Assistant
-* Source : https://docs.cloud.google.com/architecture/framework
 
 <!-- Widget JavaScript bundle -->
 <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
