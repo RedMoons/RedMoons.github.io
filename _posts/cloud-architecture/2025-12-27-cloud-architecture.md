@@ -6,6 +6,8 @@ categories:
   - AI assistant
 tags:
   - AI assistant
+  - GCP
+  - Architecture
 ---
 
 
@@ -15,7 +17,9 @@ tags:
 
 ---
 ### Cloud Architecture
-Cloud Architecture AI Assistant
+Cloud Architecture AI Assistant.
+AI assistant answers anything about Cloud Architecture.
+Please ask any question.
 
 <!-- Widget JavaScript bundle -->
 <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
